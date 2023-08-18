@@ -10,12 +10,17 @@ import UserContext from "./UserContext";
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
 
+  function toggleLoggedIn() {
+    setLoggedIn(!loggedIn)
+  }
+
   return (
     <div className="App">
       <BrowserRouter>
 
         <UserContext.Provider value={{
-          loggedIn: loggedIn
+          loggedIn: loggedIn,
+          toggleLoggedIn: toggleLoggedIn
         }}>
 
           <Nav />
