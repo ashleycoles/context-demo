@@ -5,7 +5,7 @@ import Secret from "./Secret";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import { useState } from "react";
-import UserContext from "./userContext";
+import UserContext from "./UserContext";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
