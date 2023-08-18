@@ -1,12 +1,10 @@
-import { useContext } from "react"
-import UserContext from "../UserContext"
+import LoginButton from "../LoginButton"
 
 function Footer() {
-    const {loggedIn, toggleLoggedIn} = useContext(UserContext)
     return (
         <footer>
             Copyright
-            <button onClick={toggleLoggedIn}>{ loggedIn ? 'Logout' : 'Login' }</button>
+            <LoginButton />
         </footer>
     )
 }
