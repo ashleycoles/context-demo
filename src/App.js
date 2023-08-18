@@ -4,8 +4,11 @@ import Home from "./Home";
 import Secret from "./Secret";
 import Nav from "./Nav";
 import Footer from "./Footer";
+import { useState } from "react";
 
 function App() {
+  const [loggedIn, setLoggedIn] = useState(false)
+
   return (
     <div className="App">
       <BrowserRouter>
