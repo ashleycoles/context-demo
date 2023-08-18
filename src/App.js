@@ -5,13 +5,17 @@ import Secret from "./Secret";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import { useState } from "react";
+import UserContext from "./userContext";
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(false)
+  const [loggedIn, setLoggedIn] = useState(false);
 
   return (
     <div className="App">
       <BrowserRouter>
+
+        <UserContext.Provider>
+
           <Nav />
 
           <Routes>
@@ -20,6 +24,9 @@ function App() {
           </Routes>
 
           <Footer />
+          
+        </UserContext.Provider>
+
       </BrowserRouter>
     </div>
   );
