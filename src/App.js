@@ -14,7 +14,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
 
-        <UserContext.Provider>
+        <UserContext.Provider value={{
+          loggedIn: loggedIn
+        }}>
 
           <Nav />
 
