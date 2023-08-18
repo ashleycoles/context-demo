@@ -3,13 +3,13 @@ import { NavLink } from "react-router-dom";
 import UserContext from "../UserContext";
 
 function Nav() {
-    const {loggedIn} = useContext(UserContext)
+    const {loggedIn, toggleLoggedIn} = useContext(UserContext)
 
     return (
         <nav>
             <NavLink to="/">Home</NavLink>
             { loggedIn && <NavLink to="/secret">Secret page</NavLink> }
-            <button>{ loggedIn ? 'Logout' : 'Login' }</button>
+            <button onClick={toggleLoggedIn}>{ loggedIn ? 'Logout' : 'Login' }</button>
         </nav>
     )
 }
