@@ -2,11 +2,11 @@ import { useContext } from "react"
 import UserContext from "../UserContext"
 
 function Footer() {
-    const {loggedIn} = useContext(UserContext)
+    const {loggedIn, toggleLoggedIn} = useContext(UserContext)
     return (
         <footer>
             Copyright
-            <button>{ loggedIn ? 'Logout' : 'Login' }</button>
+            <button onClick={toggleLoggedIn}>{ loggedIn ? 'Logout' : 'Login' }</button>
         </footer>
     )
 }
