@@ -1,8 +1,12 @@
+import { useContext } from "react"
+import UserContext from "../UserContext"
+
 function Footer() {
+    const {loggedIn} = useContext(UserContext)
     return (
         <footer>
             Copyright
-            <button>Login</button>
+            <button>{ loggedIn ? 'Logout' : 'Login' }</button>
         </footer>
     )
 }
